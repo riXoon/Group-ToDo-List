@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .div1 {
+    height: 130px;
+    width: 130px;
+    background-color: aqua;
+}
+.container .div2 {
+    height: 130px;
+    width: 130px;
+    background-color: rgb(0, 0, 0);
+}
+
+.grandchild1 {
+    display: block;
+}
+
+.grandchild1 .text1, .text2 {
+    font-size: 16px;
+}
+
+.grandchild1 .parent-text1 {
+    display: flex;
+    gap: 10px;
+}
+
+.grandchild2 {
+    display: flex;
+    gap: 5em;
+}
+
+.parent {
+    background-color: aliceblue;
+    width: 50%;
+    padding: 10px;
+}
+
+.parent .grandchild1 {
+    background-color: blue;
+    
+}
+.parent .grandchild2 {
+    background-color: rgb(165, 14, 14);
+    padding: 10px;
+}
+
+.parent .child1 .grandchild3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.parent .child1 .grandchild3 .box1 {
+    height: 130px;
+    width: 130px;
+    background-color: rgb(0, 0, 0);
+}
+
+.parent .child1 .grandchild3 .box2 {
+    height: 130px;
+    width: 130px;
+    background-color: rgb(225, 0, 0);
+}
+.parent .child1 .grandchild3 .box3 {
+    height: 130px;
+    width: 130px;
+    background-color: rgb(198, 121, 121);
+}
