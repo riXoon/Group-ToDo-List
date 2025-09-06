@@ -1,9 +1,11 @@
 {
-  "name": "backend",
+  "name": "todo-list-backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,9 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "eslint": "^9.35.0",
+    "globals": "^16.3.0",
     "nodemon": "^3.1.10"
   }
 }
