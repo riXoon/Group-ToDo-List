@@ -7,3 +7,5 @@ const userRouter = Router()
 userRouter.get('/', getUsers)
 
 userRouter.get('/:id', getUser)
+
+export default userRouter
