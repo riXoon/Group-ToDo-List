@@ -1,10 +1,17 @@
 import express from 'express'
 import { PORT } from './config/env.js'
 import connectToDatabase from './database/mongodb.js'
+
+import userRouter from './routes/user.routes.js'
+
 const app = express()
 
+
+app.use('api/v1/users', userRouter)
+
+
 app.get('/', (req, res) => {
-    res.send('Hello world')
+    res.send('Welcome to To-Do List!')
 })
 
 app.listen(PORT, async() => {
