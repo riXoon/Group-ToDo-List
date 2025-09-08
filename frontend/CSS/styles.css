@@ -1,78 +1,133 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #d32f2f;
+  background-image: url('assets/bg.png');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
 }
 
-.container .div1 {
-    height: 130px;
-    width: 130px;
-    background-color: aqua;
-}
-.container .div2 {
-    height: 130px;
-    width: 130px;
-    background-color: rgb(0, 0, 0);
-}
-
-.grandchild1 {
-    display: block;
+.media-section {
+  flex: 1;
+  background-color: #d32f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 400px;
 }
 
-.grandchild1 .text1, .text2 {
-    font-size: 16px;
+.media-section img {
+  max-width: 100%;
+  height: auto;
 }
 
-.grandchild1 .parent-text1 {
-    display: flex;
-    gap: 10px;
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
 }
 
-.grandchild2 {
-    display: flex;
-    gap: 5em;
+.signup-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.parent {
-    background-color: aliceblue;
-    width: 50%;
-    padding: 10px;
+.signup-form h2 {
+  margin-bottom: 20px;
+  color: #d32f2f;
+  text-align: left;
 }
 
-.parent .grandchild1 {
-    background-color: blue;
-    
-}
-.parent .grandchild2 {
-    background-color: rgb(165, 14, 14);
-    padding: 10px;
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.parent .child1 .grandchild3 {
-    display: flex;
+.terms {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.terms input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.terms a {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+.signup-form button {
+  width: 20%;
+  padding: 12px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-form button:hover {
+  background-color: #b71c1c;
+}
+
+.login-link {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.login-link a {
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    gap: 10px;
-}
+  }
 
-.parent .child1 .grandchild3 .box1 {
-    height: 130px;
-    width: 130px;
-    background-color: rgb(0, 0, 0);
-}
+  .media-section {
+    min-height: 200px;
+  }
 
-.parent .child1 .grandchild3 .box2 {
-    height: 130px;
-    width: 130px;
-    background-color: rgb(225, 0, 0);
-}
-.parent .child1 .grandchild3 .box3 {
-    height: 130px;
-    width: 130px;
-    background-color: rgb(198, 121, 121);
+  .form-section {
+    padding: 20px;
+  }
 }
