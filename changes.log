@@ -1,3 +1,6 @@
 SEPT 07, 2025 | Guhilde
 -Added 3 folders in the backend: controllers, models, routes
 -Setted up the user schema
+
+SEPT 10, 2025 | Guhilde
+-Configured middleware
