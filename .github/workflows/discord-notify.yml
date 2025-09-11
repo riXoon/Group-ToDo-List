@@ -1,0 +1,39 @@
+name: Notify Discord
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ✅ Success notification
+      - name: Send Success Notification
+        if: success()
+        uses: bytelabs-software/discord-commit-notifications@v1
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          embed-color: '0x2ecc71'   # green
+          embed-title: '✅ Build/Push Successful'
+          username: 'GitHub Bot'
+          include-repo: true
+          include-branch: true
+          include-pr-number: true
+
+      # ❌ Failure notification
+      - name: Send Failure Notification
+        if: failure()
+        uses: bytelabs-software/discord-commit-notifications@v1
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          embed-color: '0xe74c3c'   # red
+          embed-title: '❌ Build/Push Failed'
+          username: 'GitHub Bot'
+          include-repo: true
+          include-branch: true
+          include-pr-number: true
