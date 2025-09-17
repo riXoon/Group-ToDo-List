@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>To-Do Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/dashboard-mytask.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__logo"><span class="logo--highlight">To</span>-Do</div>
+
+    <div class="header__search">
+      <input class="search__input" placeholder="Search your task here..." />
+      <button class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <div class="header__actions">
+      <button class="icon-square" aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="icon-square" aria-label="notifications"><i class="fa-regular fa-bell"></i></button>
+      <div class="header__date">
+        <small>Tuesday</small>
+        20/06/2023
+      </div>
+    </div>
+  </header>
+
+  <div class="app">
+    <!-- LEFT SIDEBAR -->
+   <aside class="sidebar" aria-label="sidebar"> 
+  <div class="sidebar__profile">
+    <div class="sidebar__avatar">
+      <img src="../assets/profile.jpg" alt="User Avatar">
+    </div>
+    
+
+  <div class="sidebar__profile">
+    <div class="profile__name">Lee Seung Gi</div>
+    <div class="profile__email">leeseunggi@gmail.com</div>
+  </div>
+
+  <nav class="sidebar__nav">
+    <a class="nav__link active" href="#"><i class="fa-solid fa-grid-2"></i><span>Dashboard</span></a>
+    <a class="nav__link" href="#"><i class="fa-solid fa-triangle-exclamation"></i><span>Vital Task</span></a>
+    <a class="nav__link" href="#"><i class="fa-solid fa-clipboard-list"></i><span>My Task</span></a>
+    <a class="nav__link" href="#"><i class="fa-solid fa-list-check"></i><span>Task Categories</span></a>
+    <a class="nav__link" href="#"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    <a class="nav__link" href="#"><i class="fa-regular fa-circle-question"></i><span>Help</span></a>
+  </nav>
+
+  <a class="sidebar__logout" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
+</aside>
+
+    <!-- CENTER + RIGHT -->
+    <main class="main-grid">
+
+      <!-- center list -->
+   <section class="task-panel">
+  <header class="task-panel__header">My Tasks</header>
+
+  <div class="task-list" aria-label="My tasks">
+
+    <article class="task-card">
+      <div class="task-card__content">
+        <div class="task-card__title">
+          <div><i class="fa-regular fa-circle"></i>  Submit Documents</div>
+          <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        </div>
+        <div class="task-card__desc">
+          Make sure to submit all the necessary documents required for submission...
+        </div>
+        <div class="task-card__meta">
+          Priority: <strong>Extreme</strong> • Status: <em>Not Started</em>
+        </div>
+      </div>
+      <img src="../assets/mytask1.png" alt="Submit Documents" class="task-card__img">
+    </article>
+
+    <article class="task-card">
+      <div class="task-card__content">
+        <div class="task-card__title">
+          <div><i class="fa-regular fa-circle"></i> Complete Assignments</div>
+          <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        </div>
+        <div class="task-card__desc">
+          The assignments must be completed to pass final year exams — be sure to allocate time.
+        </div>
+        <div class="task-card__meta">
+          Priority: <strong>Moderate</strong> • Status: <em>In Progress</em>
+        </div>
+      </div>
+      <img src="../assets/mytask2.jpg" alt="Complete Assignments" class="task-card__img">
+    </article>
+
+  </div>
+</section>
+
+
+
+
+      <!-- right detail -->
+      <aside class="task-detail" aria-label="Task details">
+        <div class="task-detail__title">Submit Documents</div>
+        <div class="task-detail__meta">Priority: <strong>Extreme</strong> • Status: <em>Not Started</em></div>
+
+        <p class="task-detail__desc">
+          Task Title: Document Submission.<br>
+          Objective: To submit required documents for something important.
+        </p>
+
+        <div class="task-detail__content">
+          <p style="color:#6b7280; font-size:13px;">
+            Review the list of documents required for submission and ensure all necessary documents are ready. Organize the documents...
+          </p>
+        </div>
+
+        <div class="detail-actions">
+          <button class="fab" title="Delete"><i class="fa-solid fa-trash"></i></button>
+          <button class="fab" title="Edit"><i class="fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+  <script>
+    console.log('Layout loaded with external CSS.');
+  </script>
+</body>
+</html>
