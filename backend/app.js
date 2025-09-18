@@ -2,6 +2,8 @@ import express from 'express'
 import { PORT } from './config/env.js'
 import connectToDatabase from './database/mongodb.js'
 import cookieParser from 'cookie-parser';
+import cors from 'cors'
+import dotenv from "dotenv";
 
 import userRouter from './routes/user.routes.js'
 import authRouter from './routes/auth.routes.js'
@@ -9,6 +11,13 @@ import authRouter from './routes/auth.routes.js'
 import errorMiddleware from './middleware/error.middleware.js';
 
 const app = express()
+
+app.use(cors({
+    origin: 'http://localhost:5500',
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
+dotenv.config();
 
 app.set('trust proxy', true);
 
